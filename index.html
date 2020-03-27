@@ -5,33 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="./_css/reset.css">
+  <link rel="stylesheet" type="text/css" href="./_css/index.css">
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:600,700&display=swap" rel="stylesheet">
   
-  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  <title>Frontend Mentor | Rock, Paper, Scissors, Lizard, Spock</title>
 
-  Score
-  Rules
-
-  You Picked
-  The House Picked
-
-  You Win
-  You Lose
-
-  Play Again
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
+  <div class="wrapper">
+    <div class="main-background">
 
+      <div class="main-title">
+        <div class="logo">
+          <img src="./images/logo-bonus.svg" alt="rock paper scissors lizard spock logo">
+        </div>
+
+        <div class="scoreboard">
+          <p>Score</p>
+          <p id="score-output">12</p>
+        </div>
+        
+      </div>
+
+      <div class="selection-layout">
+        <img class="pentagon" src="./images/bg-pentagon.svg" alt="bg pentagon">
+      </div>
+
+      <div class="rules-button">
+        Rules
+      </div>
+    
+      You Picked
+      The House Picked
+    
+      You Win
+      You Lose
+    
+      Play Again
+    </div>
+
+  </div>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Eden Yeung</a>.
   </div>
 </body>
 </html>

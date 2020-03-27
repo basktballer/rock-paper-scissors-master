@@ -1,0 +1,85 @@
+/* line 17, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+.attribution {
+  font-size: 11px;
+  text-align: center; }
+  /* line 20, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+  .attribution a {
+    color: #3e52a3; }
+
+/* line 25, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+.wrapper {
+  display: block; }
+  /* line 28, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+  .wrapper .main-background {
+    background-image: radial-gradient(circle at top center, #1f3756, #141539);
+    height: 1200px;
+    display: flex;
+    flex-direction: column; }
+    /* line 34, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+    .wrapper .main-background .main-title {
+      border: 3px solid #606e85;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 60px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 1rem;
+      width: 80%; }
+      /* line 45, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+      .wrapper .main-background .main-title .options-list {
+        list-style: none;
+        font-family: "Barlow Semi Condensed", sans-serif;
+        font-weight: 700; }
+        /* line 50, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+        .wrapper .main-background .main-title .options-list li {
+          font-size: 20px;
+          color: white;
+          text-transform: uppercase; }
+      /* line 57, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+      .wrapper .main-background .main-title .scoreboard {
+        align-items: center;
+        background-color: white;
+        border-radius: 10px;
+        font-family: "Barlow Semi Condensed", sans-serif;
+        text-transform: uppercase;
+        width: 4rem;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 1.5rem; }
+        /* line 68, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+        .wrapper .main-background .main-title .scoreboard p {
+          letter-spacing: 1.5px;
+          font-size: 15px;
+          font-weight: 600;
+          color: #2a46c0; }
+        /* line 75, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+        .wrapper .main-background .main-title .scoreboard #score-output {
+          font-size: 60px;
+          font-weight: 700;
+          color: #3b4363; }
+    /* line 83, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+    .wrapper .main-background .selection-layout {
+      padding: 4rem 0;
+      height: 400px; }
+      /* line 87, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+      .wrapper .main-background .selection-layout .pentagon {
+        margin-left: auto;
+        margin-right: auto; }
+    /* line 93, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+    .wrapper .main-background .rules-button {
+      border: 3px solid #606e85;
+      border-radius: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      font-family: "Barlow Semi Condensed", sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      width: 50%;
+      color: white;
+      text-transform: uppercase;
+      text-align: center;
+      letter-spacing: 3px;
+      padding: 1rem 0; }
+
+/*# sourceMappingURL=index.css.map */

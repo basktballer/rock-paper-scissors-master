@@ -1,0 +1,111 @@
+$font-stack:    'Barlow Semi Condensed', sans-serif;
+$primary-color: #333;
+
+$dark-text: hsl(229, 25%, 31%);
+$score-text: hsl(229, 64%, 46%);
+$border-outline: 3px solid hsl(217, 16%, 45%);
+
+$main-radial-gradient: radial-gradient(circle at top center, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+
+
+// - Scissors Gradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%)
+// - Paper Gradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%)
+// - Rock Gradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%)
+// - Lizard Gradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%)
+// - Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%)
+
+.attribution {
+  font-size: 11px; text-align: center; 
+
+  a { 
+    color: hsl(228, 45%, 44%); 
+  }
+}
+
+.wrapper {
+  display:block;
+  
+  .main-background {
+    background-image: $main-radial-gradient;
+    height: 1200px;
+    display:flex;
+    flex-direction: column;
+    
+    .main-title {
+      border: $border-outline;
+      border-radius: 10px;
+      display:flex;
+      justify-content: space-between;
+      margin-top:60px;
+      margin-left:auto;
+      margin-right:auto;
+      padding:1rem;
+      width:80%;
+      
+      .options-list {
+        list-style: none;
+        font-family: $font-stack;
+        font-weight:700;
+        
+        li {
+          font-size: 20px;
+          color: white;
+          text-transform: uppercase;
+        }
+      }
+      
+      .scoreboard {
+        align-items: center;      
+        background-color: white;
+        border-radius: 10px;
+        font-family: $font-stack;
+        text-transform: uppercase;
+        width: 4rem;
+        display:flex;
+        flex-direction: column;
+        padding: 1rem 1.5rem;
+        
+        p {
+          letter-spacing: 1.5px;
+          font-size:15px;
+          font-weight:600;
+          color: hsl(229, 64%, 46%);
+        }
+        
+        #score-output{
+          font-size: 60px;
+          font-weight:700;
+          color: $dark-text;
+        }
+      }
+    }
+
+    .selection-layout {
+      padding: 4rem 0;
+      height: 400px;
+
+      .pentagon {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    
+    .rules-button {
+      border: $border-outline;
+      border-radius: 10px;
+      margin-left:auto;
+      margin-right:auto;
+      font-family: $font-stack;
+      font-weight:600;
+      font-size: 20px;
+      width:50%;
+      color: white;
+      text-transform: uppercase;
+      text-align: center;
+      letter-spacing: 3px;
+      padding: 1rem 0; 
+    }
+  } 
+}
+  
+  
