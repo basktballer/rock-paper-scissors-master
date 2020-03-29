@@ -7,6 +7,8 @@ $border-outline: 3px solid hsl(217, 16%, 45%);
 
 $main-radial-gradient: radial-gradient(circle at top center, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
 
+$hand-icon-width: 30px;
+
 
 // - Scissors Gradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%)
 // - Paper Gradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%)
@@ -83,10 +85,63 @@ $main-radial-gradient: radial-gradient(circle at top center, hsl(214, 47%, 23%),
     .selection-layout {
       padding: 4rem 0;
       height: 400px;
+      display: grid;
+      grid-template-columns:  [line1] auto [line2] 25px [line3] 25px [line4] 25px [line5] 2.5px 
+                              [line5] 50px 
+                              [line6] 2.5px [line7] 25px [line8] 25px [line9] 25px [line10] auto [end];
+      grid-template-rows: [row1] 50px [row2] 50px [row3] 50px [row4] 50px [row5] 50px [row6] auto [end];
 
       .pentagon {
         margin-left: auto;
         margin-right: auto;
+        grid-column-start: line2;
+        grid-column-end: line9;
+        grid-row-start: row2;
+        width: 200px;
+
+      } 
+
+      .circlebase {
+        border-radius: 50%;
+        background-color: white;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .hand-icon {
+        width: $hand-icon-width;
+      }
+
+      .lizard-icon {
+        width: 40px;
+      }
+
+      .rock-div {
+        grid-column: line7 / span 2;
+        grid-row-start: row5;
+      }
+      
+      .paper-div {
+        grid-column: line8 / span 2;
+        grid-row-start: row3;
+      }
+
+      .scissors-div {
+        grid-column: line5 / span 2;
+        grid-row-start: row1;
+      }
+
+      .lizard-div {
+        grid-column: line3 / span 2;
+        grid-row-start: row5;
+      }
+
+      .spock-div {
+        grid-column: line2 / span 2;
+        grid-row-start: row3;
       }
     }
     
