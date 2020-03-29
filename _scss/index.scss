@@ -6,15 +6,21 @@ $score-text: hsl(229, 64%, 46%);
 $border-outline: 3px solid hsl(217, 16%, 45%);
 
 $main-radial-gradient: radial-gradient(circle at top center, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+$scissors-radial-gradient: linear-gradient(to right,  hsl(39, 89%, 49%) , hsl(40, 84%, 53%));
+$paper-radial-gradient: linear-gradient(to right,  hsl(230, 89%, 62%) , hsl(230, 89%, 65%));
+$rock-radial-gradient: linear-gradient(to right,  hsl(349, 71%, 52%) , hsl(349, 70%, 56%));
+$lizard-radial-gradient: linear-gradient(to right,  hsl(261, 73%, 60%) , hsl(261, 72%, 63%));
+$spock-radial-gradient: linear-gradient(to right,  hsl(189, 59%, 53%) , hsl(189, 58%, 57%));
 
-$hand-icon-width: 30px;
+$icon-width: 30px;
+$pentagon-width: 200px;
+$grid-dim: ($pentagon-width / 2);
+$grid-half-dim: ($grid-dim / 2);
+$grid-quarter-dim: ($grid-dim / 4);
+$grid-spacer: ($grid-half-dim / 10);
 
 
-// - Scissors Gradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%)
-// - Paper Gradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%)
-// - Rock Gradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%)
-// - Lizard Gradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%)
-// - Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%)
+
 
 .attribution {
   font-size: 11px; text-align: center; 
@@ -86,63 +92,77 @@ $hand-icon-width: 30px;
       padding: 4rem 0;
       height: 400px;
       display: grid;
-      grid-template-columns:  [line1] auto [line2] 25px [line3] 25px [line4] 25px [line5] 2.5px 
-                              [line5] 50px 
-                              [line6] 2.5px [line7] 25px [line8] 25px [line9] 25px [line10] auto [end];
-      grid-template-rows: [row1] 50px [row2] 50px [row3] 50px [row4] 50px [row5] 50px [row6] auto [end];
+      grid-template-columns:  [line1] auto [line2] $grid-half-dim [line3] $grid-half-dim 
+                              [line4] $grid-quarter-dim [line5] $grid-quarter-dim [line6] $grid-quarter-dim [line7] $grid-quarter-dim [line8] $grid-quarter-dim [line9] $grid-quarter-dim
+                              [line10] $grid-half-dim [line11] $grid-half-dim [line12] auto [end];
+      grid-template-rows: [row1] $grid-half-dim [row2] $grid-quarter-dim [row3] $grid-quarter-dim [row4] $grid-half-dim [row5] $grid-quarter-dim [row6] $grid-quarter-dim [row7] $grid-half-dim [row8] $grid-half-dim [row9] $grid-dim [row10] auto [end];
 
       .pentagon {
         margin-left: auto;
         margin-right: auto;
-        grid-column-start: line2;
-        grid-column-end: line9;
+        grid-column: line2 / line12;
         grid-row-start: row2;
-        width: 200px;
-
+        width: $pentagon-width;
       } 
 
       .circlebase {
         border-radius: 50%;
-        background-color: white;
+        padding:10px;
+        border: 12px solid transparent;       
         width: 100%;
         height: auto;
         display: flex;
         justify-content: center;
         align-items: center;
+        box-sizing: border-box;
       }
       
-      .hand-icon {
-        width: $hand-icon-width;
-      }
-
-      .lizard-icon {
-        width: 40px;
+      .icon {
+        width: $icon-width;
       }
 
       .rock-div {
-        grid-column: line7 / span 2;
-        grid-row-start: row5;
+        grid-column: line8 / span 3;
+        grid-row: row7 / span 2;
+        background: 
+        linear-gradient(#fff,#fff) padding-box, /*this is your white background*/
+        $rock-radial-gradient border-box;
       }
       
       .paper-div {
-        grid-column: line8 / span 2;
-        grid-row-start: row3;
+        grid-column: line10 / span 2;
+        grid-row: row3 / span 3;
+        background: 
+        linear-gradient(#fff,#fff) padding-box, /*this is your white background*/
+        $paper-radial-gradient border-box;
       }
 
       .scissors-div {
-        grid-column: line5 / span 2;
-        grid-row-start: row1;
+        grid-column: line5 / span 4;
+        grid-row: row1 / span 3;
+        background: 
+        linear-gradient(#fff,#fff) padding-box, /*this is your white background*/
+        $scissors-radial-gradient border-box;
       }
 
       .lizard-div {
-        grid-column: line3 / span 2;
-        grid-row-start: row5;
+        grid-column: line3 / span 3;
+        grid-row: row7 / span 2;
+        background: 
+        linear-gradient(#fff,#fff) padding-box, /*this is your white background*/
+        $lizard-radial-gradient border-box;
       }
 
       .spock-div {
         grid-column: line2 / span 2;
-        grid-row-start: row3;
+        grid-row: row3 / span 3;
+        background: 
+        linear-gradient(#fff,#fff) padding-box, /*this is your white background*/
+        $spock-radial-gradient border-box;
       }
+
+
+
     }
     
     .rules-button {
