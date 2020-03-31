@@ -6,13 +6,14 @@ $score-text: hsl(229, 64%, 46%);
 $border-outline: 3px solid hsl(217, 16%, 45%);
 
 $main-radial-gradient: radial-gradient(circle at top center, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
-$scissors-lienar-gradient: linear-gradient(to right,  hsl(39, 89%, 49%) , hsl(40, 84%, 53%));
-$paper-lienar-gradient: linear-gradient(to right,  hsl(230, 89%, 62%) , hsl(230, 89%, 65%));
+$scissors-lienar-gradient: linear-gradient(to top,  hsl(39, 89%, 49%), 1%, hsl(40, 84%, 53%));
+$paper-lienar-gradient: linear-gradient(to top,  hsl(230, 89%, 62%), 1%, hsl(230, 89%, 65%));
 $rock-lienar-gradient: linear-gradient(to top,  hsl(349, 71%, 52%), 1%, hsl(349, 70%, 56%) );
-$lizard-lienar-gradient: linear-gradient(  hsl(261, 73%, 60%) , hsl(261, 72%, 63%));
-$spock-lienar-gradient: linear-gradient(to right,  hsl(189, 59%, 53%) , hsl(189, 58%, 57%));
+$lizard-lienar-gradient: linear-gradient(to top,  hsl(261, 73%, 60%), 1%, hsl(261, 72%, 63%));
+$spock-lienar-gradient: linear-gradient(to top,  hsl(189, 59%, 53%), 1%, hsl(189, 58%, 57%));
 
 $icon-width: 30px;
+$lizard-icon-width: 40px;
 $pentagon-width: 200px;
 $grid-dim: ($pentagon-width / 2);
 $grid-half-dim: ($grid-dim / 2);
@@ -32,9 +33,11 @@ $grid-spacer: ($grid-half-dim / 10);
 
 .wrapper {
   display:block;
+  position: relative;
   
   .main-background {
     background-image: $main-radial-gradient;
+    top: 0;
     height: 1200px;
     display:flex;
     flex-direction: column;
@@ -106,6 +109,7 @@ $grid-spacer: ($grid-half-dim / 10);
         grid-column: line3 / line12;
         grid-row-start: row2;
         width: $pentagon-width;
+        z-index: 1;
       } 
 
       .circlebase {
@@ -118,10 +122,15 @@ $grid-spacer: ($grid-half-dim / 10);
         justify-content: center;
         align-items: center;
         box-sizing: border-box;
+        z-index: 10;
       }
       
       .icon {
         width: $icon-width;
+      }
+
+      .lizard-icon {
+        width: $lizard-icon-width;
       }
 
       .rock-div {
@@ -139,7 +148,7 @@ $grid-spacer: ($grid-half-dim / 10);
         background: 
         linear-gradient(#fff,#fff) padding-box, /*this is your white background*/
         $paper-lienar-gradient border-box;
-        box-shadow: inset 0 3px lightgray, 0 3px 0 0 hsl(349, 71%, 52%), 0 2px 0 0 hsl(349, 71%, 52%), 0 1px 0 0 hsl(349, 71%, 52%) ; 
+        box-shadow: inset 0 3px lightgray, 0 3px 0 0 hsl(230, 89%, 62%), 0 2px 0 0 hsl(230, 89%, 62%), 0 1px 0 0 hsl(230, 89%, 62%) ; 
       }
 
       .scissors-div {
@@ -148,7 +157,7 @@ $grid-spacer: ($grid-half-dim / 10);
         background: 
         linear-gradient(#fff,#fff) padding-box, /*this is your white background*/
         $scissors-lienar-gradient border-box;
-        box-shadow: inset 0 3px lightgray, 0 3px 0 0 hsl(349, 71%, 52%), 0 2px 0 0 hsl(349, 71%, 52%), 0 1px 0 0 hsl(349, 71%, 52%) ; 
+        box-shadow: inset 0 3px lightgray, 0 3px 0 0 hsl(39, 89%, 49%), 0 2px 0 0 hsl(39, 89%, 49%), 0 1px 0 0 hsl(39, 89%, 49%) ; 
       }
 
       .lizard-div {
@@ -157,7 +166,7 @@ $grid-spacer: ($grid-half-dim / 10);
         background: 
         linear-gradient(#fff,#fff) padding-box, /*this is your white background*/
         $lizard-lienar-gradient border-box;
-        box-shadow: inset 0 3px lightgray, 0 3px 0 0 hsl(349, 71%, 52%), 0 2px 0 0 hsl(349, 71%, 52%), 0 1px 0 0 hsl(349, 71%, 52%) ; 
+        box-shadow: inset 0 3px lightgray, 0 3px 0 0 hsl(261, 73%, 60%), 0 2px 0 0 hsl(261, 73%, 60%), 0 1px 0 0 hsl(261, 73%, 60%) ; 
       }
 
       .spock-div {
@@ -166,11 +175,8 @@ $grid-spacer: ($grid-half-dim / 10);
         background: 
         linear-gradient(#fff,#fff) padding-box, /*this is your white background*/
         $spock-lienar-gradient border-box;
-        box-shadow: inset 0 3px lightgray, 0 3px 0 0 hsl(349, 71%, 52%), 0 2px 0 0 hsl(349, 71%, 52%), 0 1px 0 0 hsl(349, 71%, 52%) ; 
+        box-shadow: inset 0 3px lightgray, 0 3px 0 0 hsl(189, 59%, 53%), 0 2px 0 0 hsl(189, 59%, 53%), 0 1px 0 0 hsl(189, 59%, 53%) ; 
       }
-
-
-
     }
     
     .rules-button {
@@ -188,7 +194,31 @@ $grid-spacer: ($grid-half-dim / 10);
       letter-spacing: 3px;
       padding: 1rem 0; 
     }
+
+
   } 
+
+  .rules-popup {
+    display: none;
+    position: absolute;
+    top: 0;
+    background: white;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      font-family: $font-stack;
+      font-size: 30px;
+      font-weight:700;
+      color: $dark-text;
+      text-transform: uppercase;
+    }
+  }
+
 }
   
   
