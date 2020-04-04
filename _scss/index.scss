@@ -20,6 +20,10 @@ $grid-half-dim: ($grid-dim / 2);
 $grid-quarter-dim: ($grid-dim / 4);
 $grid-spacer: ($grid-half-dim / 10);
 
+$game-window-height: 400px;
+$game-window-padding: 4rem 0;
+$game-icon-width: 50px;
+
 
 
 
@@ -92,8 +96,8 @@ $grid-spacer: ($grid-half-dim / 10);
     }
 
     .selection-layout {
-      padding: 4rem 0;
-      height: 400px;
+      padding: $game-window-padding;
+      height: $game-window-height;
       display: grid;
       grid-template-columns:  [line1] auto [line2] $grid-quarter-dim [line3] $grid-quarter-dim [line4] $grid-quarter-dim
                               [line5] $grid-quarter-dim [line6] $grid-quarter-dim 
@@ -178,6 +182,105 @@ $grid-spacer: ($grid-half-dim / 10);
         box-shadow: inset 0 3px lightgray, 0 3px 0 0 hsl(189, 59%, 53%), 0 2px 0 0 hsl(189, 59%, 53%), 0 1px 0 0 hsl(189, 59%, 53%) ; 
       }
     }
+
+    .game-layout {
+      padding: $game-window-padding;
+      height: $game-window-height;
+      display: none;
+      
+      .selection-panel {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        
+        .user-selection {
+          display: flex;
+          flex-direction: column;
+
+          .circlebase {
+            border-radius: 50%;
+            padding:10px;
+            border: 12px solid transparent;       
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            z-index: 10;
+          }
+          
+           .user-icon  {
+            width: $game-icon-width;
+          }
+        }
+        
+        .house-selection {
+          display: flex;
+          flex-direction: column;
+
+          .circlebase {
+            border-radius: 50%;
+            padding:10px;
+            border: 12px solid transparent;       
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            z-index: 10;
+          }
+          
+           .house-icon  {
+            width: $game-icon-width;
+          }
+        }
+
+        .rock-div {
+          grid-column: line8 / span 4;
+          grid-row: row7 / span 2;
+          background: 
+          linear-gradient(#fff,#fff) padding-box, /*this is your white background*/
+          $rock-lienar-gradient border-box;
+          box-shadow: inset 0 3px lightgray, 0 3px 0 0 hsl(349, 71%, 52%), 0 2px 0 0 hsl(349, 71%, 52%), 0 1px 0 0 hsl(349, 71%, 52%) ; 
+        }
+        
+        .paper-div {
+          grid-column: line9 / span 4;
+          grid-row: row3 / span 3;
+          background: 
+          linear-gradient(#fff,#fff) padding-box, /*this is your white background*/
+          $paper-lienar-gradient border-box;
+          box-shadow: inset 0 3px lightgray, 0 3px 0 0 hsl(230, 89%, 62%), 0 2px 0 0 hsl(230, 89%, 62%), 0 1px 0 0 hsl(230, 89%, 62%) ; 
+        }
+  
+        .scissors-div {
+          grid-column: line6 / span 3;
+          grid-row: row1 / span 3;
+          background: 
+          linear-gradient(#fff,#fff) padding-box, /*this is your white background*/
+          $scissors-lienar-gradient border-box;
+          box-shadow: inset 0 3px lightgray, 0 3px 0 0 hsl(39, 89%, 49%), 0 2px 0 0 hsl(39, 89%, 49%), 0 1px 0 0 hsl(39, 89%, 49%) ; 
+        }
+  
+        .lizard-div {
+          background: 
+          linear-gradient(#fff,#fff) padding-box, /*this is your white background*/
+          $lizard-lienar-gradient border-box;
+          box-shadow: inset 0 3px lightgray, 0 3px 0 0 hsl(261, 73%, 60%), 0 2px 0 0 hsl(261, 73%, 60%), 0 1px 0 0 hsl(261, 73%, 60%) ; 
+        }
+  
+        .spock-div {
+          grid-column: line2 / span 4;
+          grid-row: row3 / span 3;
+          background: 
+          linear-gradient(#fff,#fff) padding-box, /*this is your white background*/
+          $spock-lienar-gradient border-box;
+          box-shadow: inset 0 3px lightgray, 0 3px 0 0 hsl(189, 59%, 53%), 0 2px 0 0 hsl(189, 59%, 53%), 0 1px 0 0 hsl(189, 59%, 53%) ; 
+        }
+      }
+    }
     
     .rules-button {
       border: $border-outline;
@@ -212,10 +315,27 @@ $grid-spacer: ($grid-half-dim / 10);
 
     h1 {
       font-family: $font-stack;
+      font-size: 60px;
+      font-weight:700;
+      color: $dark-text;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-family: $font-stack;
       font-size: 30px;
       font-weight:700;
       color: $dark-text;
       text-transform: uppercase;
+    }
+
+    h3 {
+      font-family: $font-stack;
+      font-size: 25px;
+      font-weight:700;
+      color: $dark-text;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
     }
   }
 
