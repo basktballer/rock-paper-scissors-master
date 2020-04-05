@@ -11,6 +11,10 @@ $paper-lienar-gradient: linear-gradient(to top,  hsl(230, 89%, 62%), 1%, hsl(230
 $rock-lienar-gradient: linear-gradient(to top,  hsl(349, 71%, 52%), 1%, hsl(349, 70%, 56%) );
 $lizard-lienar-gradient: linear-gradient(to top,  hsl(261, 73%, 60%), 1%, hsl(261, 72%, 63%));
 $spock-lienar-gradient: linear-gradient(to top,  hsl(189, 59%, 53%), 1%, hsl(189, 58%, 57%));
+$winner-box-shadow: 0 0 20px 20px hsl(214, 47%, 43%),
+                    0 0 40px 40px hsl(214, 47%, 37%),
+                    0 0 60px 60px hsl(214, 47%, 30%),
+                    0 0 80px 80px hsl(214, 47%, 23%);
 
 $icon-width: 30px;
 $lizard-icon-width: 40px;
@@ -60,6 +64,7 @@ h3 {
   letter-spacing: 1px;
   margin-top: 30px;
   text-align: center;
+  z-index: 10;
 }
 
 .wrapper {
@@ -69,7 +74,7 @@ h3 {
   .main-background {
     background-image: $main-radial-gradient;
     top: 0;
-    height: 1200px;
+    height: 960px;
     display:flex;
     flex-direction: column;
     
@@ -231,6 +236,7 @@ h3 {
           align-items: center;
           width: 130px;
           height: auto;
+          z-index: 20;
 
           .circlebase {
             border-radius: 50%;
@@ -256,6 +262,7 @@ h3 {
           align-items: center;
           width: 130px;
           height: auto;
+          z-index: 20;          
 
           .circlebase {
             border-radius: 50%;
@@ -309,6 +316,14 @@ h3 {
           linear-gradient(#fff,#fff) padding-box, /*this is your white background*/
           $spock-lienar-gradient border-box;
           box-shadow: inset 0 3px lightgray, 0 3px 0 0 hsl(189, 59%, 53%), 0 2px 0 0 hsl(189, 59%, 53%), 0 1px 0 0 hsl(189, 59%, 53%) ; 
+        }
+
+        .winner-box-shadow {
+          box-shadow: $winner-box-shadow;
+        }
+
+        .winner-fade-back {
+          z-index: 1;
         }
       }
     }
@@ -373,6 +388,7 @@ h3 {
     border-radius: 10px;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
 
   }
 
