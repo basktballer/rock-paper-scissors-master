@@ -11,14 +11,24 @@ const spockButton = document.querySelector(".spock-div");
 const rulesButton = document.querySelector(".rules-button");
 const rulesPopup = document.querySelector(".rules-popup");
 const closeButton = document.querySelector(".close-button");
-const selectionLayout = document.querySelector(".selection-layout")
-const gameLayout = document.querySelector(".game-layout")
+const selectionLayout = document.querySelector(".selection-layout");
+const gameLayout = document.querySelector(".game-layout");
+const userDiv = document.querySelector(".user");
+const houseDiv = document.querySelector(".house");
+const userIcon = document.querySelector(".user-icon");
+const houseIcon = document.querySelector(".house-icon");
+const victoryText = document.querySelector(".victory");
+const defeatText = document.querySelector(".defeat");
+const drawText = document.querySelector(".draw");
+const playAgainButton = document.querySelector(".play-again");
+const resultsPanel = document.querySelector(".results-panel");
 
 const scoreOutput = document.getElementById("score-output");
 let score = 0;
 let winner = "";
-
-
+let choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+let houseChoice = '';
+let userChoice = '';
 
 rockButton.addEventListener('click', function (event) {
   playGame('rock');
@@ -48,37 +58,48 @@ closeButton.addEventListener('click', function (event) {
   rulesPopup.style.display = "none";
 })
 
+playAgainButton.addEventListener('click', function (event) {
+  resetElements();
+})
+
 async function playGame(selection) {
-  let choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
-  let houseChoice = '';
 
   selectionLayout.style.display = "none";
   gameLayout.style.display = "block";
+  userChoice = selection;
   
   console.log(`user selected ${selection}, waiting 1 seconds for computer to pick`)
-  document.querySelector(".user-icon").src=`./images/icon-${selection}.svg`;
-  document.querySelectorAll(".user, ")
-  element.classList.add("my-class")
+  userIcon.src=`./images/icon-${selection}.svg`;
+  userDiv.classList.add(`${selection}-div`)
   
   await new Promise(r => setTimeout(r, 1000));
   
   houseChoice = choices[Math.floor(Math.random() * 4)];
   console.log(`house selected ${houseChoice}, waiting 1 seconds and evaluate`)
-  document.querySelector(".house-icon").src=`./images/icon-${houseChoice}.svg`;
+  houseIcon.src=`./images/icon-${houseChoice}.svg`;
+  houseIcon.style.display = "block";
+  houseDiv.classList.add(`${houseChoice}-div`)
 
   await new Promise(r => setTimeout(r, 1000));
 
   winner = evaluateChoices(selection, houseChoice);
+  resultsPanel.style.display = "flex";
 
-  if (winner = 'user') {
+  if (winner === 'user') {
+    victoryText.style.display = "block";
     console.log(`${selection} beats ${houseChoice}. User wins!`)
     score = scoreOutput.innerHTML;
     score++;
     scoreOutput.innerHTML = score;
-  } else {
-
+  } else if (winner === 'house'){
+    defeatText.style.display = "block";
     console.log(`${houseChoice} beats ${selection}. House wins!`)
+  } else {
+    drawText.style.display = "block";
+    console.log(`Draw!`)
   }
+
+  playAgainButton.style.display = "block";
 
 }
 
@@ -118,4 +139,18 @@ function evaluateChoices(user, house) {
       return 'house'
     }
   }
+}
+
+function resetElements() {
+  playAgainButton.style.display = "none";
+  victoryText.style.display = "none"
+  drawText.style.display = "none"
+  defeatText.style.display = "none"
+  gameLayout.style.display = "none";
+  selectionLayout.style.display = "grid";
+  houseIcon.src="";
+  houseIcon.style.display = "none";
+  houseDiv.classList.remove(`${houseChoice}-div`)
+  userIcon.src="";
+  userDiv.classList.remove(`${userChoice}-div`)
 }
