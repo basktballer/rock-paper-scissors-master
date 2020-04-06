@@ -1,4 +1,4 @@
-/* line 31, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+/* line 32, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
 h1 {
   font-family: "Barlow Semi Condensed", sans-serif;
   font-size: 60px;
@@ -6,7 +6,7 @@ h1 {
   color: white;
   text-transform: uppercase; }
 
-/* line 39, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+/* line 40, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
 h2 {
   font-family: "Barlow Semi Condensed", sans-serif;
   font-size: 20px;
@@ -14,7 +14,7 @@ h2 {
   color: #3b4363;
   text-transform: uppercase; }
 
-/* line 47, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+/* line 48, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
 h3 {
   font-family: "Barlow Semi Condensed", sans-serif;
   font-size: 14px;
@@ -26,12 +26,12 @@ h3 {
   text-align: center;
   z-index: 10; }
 
-/* line 121, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+/* line 122, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
 .wrapper {
   display: block;
   position: relative;
   height: 100vh; }
-  /* line 126, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+  /* line 127, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
   .wrapper .transparent {
     position: absolute;
     top: 0;
@@ -39,14 +39,14 @@ h3 {
     width: 100%;
     background: rgba(0, 0, 0, 0.7);
     z-index: 19; }
-  /* line 135, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+  /* line 136, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
   .wrapper .main-background {
     background-image: radial-gradient(circle at top center, #1f3756, #141539);
     top: 0;
     display: flex;
     flex-direction: column;
     height: 100vh; }
-    /* line 142, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+    /* line 143, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
     .wrapper .main-background .main-title {
       border: 3px solid #606e85;
       border-radius: 10px;
@@ -58,46 +58,50 @@ h3 {
       padding: 1rem;
       width: 80%;
       min-width: 250px; }
-      /* line 154, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+      /* line 155, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+      .wrapper .main-background .main-title .logo {
+        height: 5rem;
+        width: 5rem; }
+      /* line 160, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
       .wrapper .main-background .main-title .options-list {
         list-style: none;
         font-family: "Barlow Semi Condensed", sans-serif;
         font-weight: 700; }
-        /* line 159, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+        /* line 165, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
         .wrapper .main-background .main-title .options-list li {
           font-size: 20px;
           color: white;
           text-transform: uppercase; }
-      /* line 166, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+      /* line 172, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
       .wrapper .main-background .main-title .scoreboard {
         align-items: center;
         background-color: white;
         border-radius: 10px;
         font-family: "Barlow Semi Condensed", sans-serif;
         text-transform: uppercase;
-        width: 4rem;
+        width: 3rem;
         display: flex;
         flex-direction: column;
         padding: 1rem 1.5rem; }
-        /* line 177, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+        /* line 183, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
         .wrapper .main-background .main-title .scoreboard p {
           letter-spacing: 1.5px;
-          font-size: 15px;
+          font-size: 14px;
           font-weight: 600;
           color: #2a46c0; }
-        /* line 184, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+        /* line 190, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
         .wrapper .main-background .main-title .scoreboard #score-output {
-          font-size: 60px;
+          font-size: 36px;
           font-weight: 700;
           color: #3b4363; }
-    /* line 192, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+    /* line 198, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
     .wrapper .main-background .selection-layout {
       padding: 4rem 0;
       height: 400px;
       display: grid;
       grid-template-columns: [line1] auto [line2] 25px [line3] 25px [line4] 25px [line5] 25px [line6] 25px [line7] 50px [line8] 25px [line9] 25px [line10] 25px [line11] 25px [line12] 25px [line13] auto [end];
       grid-template-rows: [row1] 50px [row2] 25px [row3] 25px [row4] 50px [row5] 25px [row6] 25px [row7] 50px [row8] 50px [row9] 100px [row10] auto [end]; }
-      /* line 198, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+      /* line 204, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
       .wrapper .main-background .selection-layout .pentagon {
         margin-left: auto;
         margin-right: auto;
@@ -105,7 +109,7 @@ h3 {
         grid-row-start: row2;
         width: 200px;
         z-index: 1; }
-      /* line 207, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+      /* line 213, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
       .wrapper .main-background .selection-layout .circlebase {
         border-radius: 50%;
         padding: 10px;
@@ -117,57 +121,57 @@ h3 {
         align-items: center;
         box-sizing: border-box;
         z-index: 10; }
-      /* line 211, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+      /* line 217, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
       .wrapper .main-background .selection-layout .icon {
         width: 30px; }
-      /* line 215, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+      /* line 221, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
       .wrapper .main-background .selection-layout .lizard-icon {
         width: 40px; }
-      /* line 219, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+      /* line 225, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
       .wrapper .main-background .selection-layout .rock-div {
         grid-column: line8 / span 4;
         grid-row: row7 / span 2;
         background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to top, #dc2e4e, 1%, #dd405d) border-box;
         box-shadow: inset 0 3px lightgray, 0 3px 0 0 #dc2e4e, 0 2px 0 0 #dc2e4e, 0 1px 0 0 #dc2e4e; }
-      /* line 225, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+      /* line 231, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
       .wrapper .main-background .selection-layout .paper-div {
         grid-column: line9 / span 4;
         grid-row: row3 / span 3;
         background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to top, #4865f4, 1%, #5671f5) border-box;
         box-shadow: inset 0 3px lightgray, 0 3px 0 0 #4865f4, 0 2px 0 0 #4865f4, 0 1px 0 0 #4865f4; }
-      /* line 231, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+      /* line 237, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
       .wrapper .main-background .selection-layout .scissors-div {
         grid-column: line6 / span 3;
         grid-row: row1 / span 3;
         background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to top, #ec9e0e, 1%, #eca922) border-box;
         box-shadow: inset 0 3px lightgray, 0 3px 0 0 #ec9e0e, 0 2px 0 0 #ec9e0e, 0 1px 0 0 #ec9e0e; }
-      /* line 237, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+      /* line 243, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
       .wrapper .main-background .selection-layout .lizard-div {
         grid-column: line3 / span 4;
         grid-row: row7 / span 2;
         background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to top, #834fe3, 1%, #8c5de5) border-box;
         box-shadow: inset 0 3px lightgray, 0 3px 0 0 #834fe3, 0 2px 0 0 #834fe3, 0 1px 0 0 #834fe3; }
-      /* line 243, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+      /* line 249, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
       .wrapper .main-background .selection-layout .spock-div {
         grid-column: line2 / span 4;
         grid-row: row3 / span 3;
         background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to top, #40b9ce, 1%, #52bed1) border-box;
         box-shadow: inset 0 3px lightgray, 0 3px 0 0 #40b9ce, 0 2px 0 0 #40b9ce, 0 1px 0 0 #40b9ce; }
-    /* line 250, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+    /* line 256, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
     .wrapper .main-background .game-layout {
       padding: 4rem 0;
       height: 400px;
       display: none; }
-      /* line 255, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+      /* line 261, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
       .wrapper .main-background .game-layout .selection-panel {
         width: 100%;
         height: 200px;
         display: flex;
         justify-content: space-around; }
-        /* line 261, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+        /* line 267, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
         .wrapper .main-background .game-layout .selection-panel .selection-placeholder {
           background-color: #3b4363; }
-        /* line 265, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+        /* line 271, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
         .wrapper .main-background .game-layout .selection-panel .user-selection {
           display: flex;
           flex-direction: column;
@@ -175,7 +179,7 @@ h3 {
           width: 130px;
           height: auto;
           z-index: 20; }
-          /* line 268, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+          /* line 274, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
           .wrapper .main-background .game-layout .selection-panel .user-selection .circlebase {
             border-radius: 50%;
             padding: 10px;
@@ -187,18 +191,18 @@ h3 {
             align-items: center;
             box-sizing: border-box;
             z-index: 10; }
-          /* line 272, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+          /* line 278, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
           .wrapper .main-background .game-layout .selection-panel .user-selection .user-icon {
             width: 50px; }
-        /* line 277, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+        /* line 283, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
         .wrapper .main-background .game-layout .selection-panel .house-selection {
-          display: block;
+          display: flex;
           flex-direction: column;
           align-items: center;
           width: 130px;
           height: auto;
           z-index: 20; }
-          /* line 280, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+          /* line 286, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
           .wrapper .main-background .game-layout .selection-panel .house-selection .circlebase {
             border-radius: 50%;
             padding: 10px;
@@ -210,46 +214,46 @@ h3 {
             align-items: center;
             box-sizing: border-box;
             z-index: 10; }
-          /* line 284, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+          /* line 290, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
           .wrapper .main-background .game-layout .selection-panel .house-selection .house-icon {
             display: none;
             width: 50px; }
-        /* line 290, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+        /* line 296, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
         .wrapper .main-background .game-layout .selection-panel .rock-div {
           background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to top, #dc2e4e, 1%, #dd405d) border-box;
           box-shadow: inset 0 3px lightgray, 0 3px 0 0 #dc2e4e, 0 2px 0 0 #dc2e4e, 0 1px 0 0 #dc2e4e; }
-        /* line 294, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+        /* line 300, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
         .wrapper .main-background .game-layout .selection-panel .paper-div {
           background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to top, #4865f4, 1%, #5671f5) border-box;
           box-shadow: inset 0 3px lightgray, 0 3px 0 0 #4865f4, 0 2px 0 0 #4865f4, 0 1px 0 0 #4865f4; }
-        /* line 298, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+        /* line 304, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
         .wrapper .main-background .game-layout .selection-panel .scissors-div {
           background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to top, #ec9e0e, 1%, #eca922) border-box;
           box-shadow: inset 0 3px lightgray, 0 3px 0 0 #ec9e0e, 0 2px 0 0 #ec9e0e, 0 1px 0 0 #ec9e0e; }
-        /* line 302, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+        /* line 308, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
         .wrapper .main-background .game-layout .selection-panel .lizard-div {
           background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to top, #834fe3, 1%, #8c5de5) border-box;
           box-shadow: inset 0 3px lightgray, 0 3px 0 0 #834fe3, 0 2px 0 0 #834fe3, 0 1px 0 0 #834fe3; }
-        /* line 306, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+        /* line 312, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
         .wrapper .main-background .game-layout .selection-panel .spock-div {
           background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to top, #40b9ce, 1%, #52bed1) border-box;
           box-shadow: inset 0 3px lightgray, 0 3px 0 0 #40b9ce, 0 2px 0 0 #40b9ce, 0 1px 0 0 #40b9ce; }
-        /* line 310, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+        /* line 316, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
         .wrapper .main-background .game-layout .selection-panel .winner-box-shadow {
           box-shadow: 0 0 20px 20px #3a67a1, 0 0 40px 40px #32588b, 0 0 60px 60px #294870, 0 0 80px 80px #1f3756; }
-        /* line 314, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+        /* line 320, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
         .wrapper .main-background .game-layout .selection-panel .winner-fade-back {
           z-index: 1; }
-    /* line 320, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+    /* line 326, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
     .wrapper .main-background .results-panel {
       display: flex;
       flex-direction: column;
       align-items: center;
       margin: 50px 0; }
-      /* line 326, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+      /* line 332, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
       .wrapper .main-background .results-panel .victory, .wrapper .main-background .results-panel .defeat, .wrapper .main-background .results-panel .draw {
         display: none; }
-      /* line 330, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+      /* line 336, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
       .wrapper .main-background .results-panel .play-again {
         margin-top: 30px;
         border: white;
@@ -267,7 +271,7 @@ h3 {
         padding: 1rem 0;
         display: none;
         background-color: white; }
-    /* line 336, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+    /* line 342, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
     .wrapper .main-background .rules-button {
       border: 3px solid #606e85;
       border-radius: 10px;
@@ -285,7 +289,7 @@ h3 {
       display: block;
       background-color: transparent;
       min-width: 200px; }
-  /* line 343, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+  /* line 349, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
   .wrapper .rules-popup {
     display: none;
     position: absolute;
@@ -298,40 +302,45 @@ h3 {
     flex-direction: column;
     align-items: center;
     justify-content: space-around; }
-  /* line 358, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+  /* line 364, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
   .wrapper .attribution {
     font-size: 11px;
     text-align: center; }
-    /* line 361, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+    /* line 367, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
     .wrapper .attribution a {
       color: #3e52a3; }
 
-@media all and (min-width: 600px) {
-  /* line 371, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+@media all and (min-width: 700px) {
+  /* line 377, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
   .wrapper .main-background .main-title {
     margin-top: 80px;
     border-radius: 15px;
     width: 50%;
-    max-width: 800px;
+    max-width: 600px;
     padding: 1rem 1.5rem; }
-    /* line 378, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+    /* line 384, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+    .wrapper .main-background .main-title .logo {
+      width: 9rem;
+      height: 9rem; }
+    /* line 389, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
     .wrapper .main-background .main-title .scoreboard {
-      width: 6rem; }
-      /* line 381, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+      width: 6rem;
+      justify-content: space-evenly; }
+      /* line 393, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
       .wrapper .main-background .main-title .scoreboard p {
         font-size: 20px; }
-      /* line 385, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+      /* line 397, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
       .wrapper .main-background .main-title .scoreboard #score-output {
         font-size: 70px; }
-  /* line 391, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+  /* line 403, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
   .wrapper .main-background .selection-layout {
     grid-template-columns: [line1] auto [line2] 43.75px [line3] 43.75px [line4] 43.75px [line5] 43.75px [line6] 43.75px [line7] 87.5px [line8] 43.75px [line9] 43.75px [line10] 43.75px [line11] 43.75px [line12] 43.75px [line13] auto [end];
     grid-template-rows: [row1] 87.5px [row2] 43.75px [row3] 43.75px [row4] 87.5px [row5] 43.75px [row6] 43.75px [row7] 87.5px [row8] 87.5px [row9] 175px [row10] auto [end];
     padding: 6rem 0; }
-    /* line 395, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+    /* line 407, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
     .wrapper .main-background .selection-layout .pentagon {
       width: 350px; }
-    /* line 399, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+    /* line 411, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
     .wrapper .main-background .selection-layout .circlebase {
       border-radius: 50%;
       padding: 10px;
@@ -343,20 +352,43 @@ h3 {
       align-items: center;
       box-sizing: border-box;
       z-index: 10; }
-    /* line 403, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+    /* line 415, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
     .wrapper .main-background .selection-layout .icon {
       width: 45px; }
-    /* line 407, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+    /* line 419, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
     .wrapper .main-background .selection-layout .lizard-icon {
       width: 65px; }
-  /* line 413, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+  /* line 426, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+  .wrapper .main-background .game-layout .selection-panel {
+    height: 400px;
+    align-content: center; }
+    /* line 429, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+    .wrapper .main-background .game-layout .selection-panel .user-selection {
+      flex-direction: column-reverse;
+      width: 200px; }
+      /* line 433, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+      .wrapper .main-background .game-layout .selection-panel .user-selection .circlebase {
+        border-radius: 50%;
+        padding: 10px;
+        border: 18px solid transparent;
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        z-index: 10; }
+    /* line 438, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+    .wrapper .main-background .game-layout .selection-panel .house-selection {
+      flex-direction: column-reverse; }
+  /* line 444, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
   .wrapper .main-background .rules-button {
-    margin-top: 4rem;
+    margin-top: 3rem;
     margin-left: 0;
     margin-right: 2rem;
     width: 150px;
     align-self: flex-end; }
-  /* line 422, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+  /* line 453, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
   .wrapper .rules-popup {
     max-width: 400px;
     max-height: 400px;
@@ -367,16 +399,16 @@ h3 {
     flex-direction: row;
     justify-content: space-evenly;
     padding: 2rem 1rem 3.5rem; }
-    /* line 433, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+    /* line 464, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
     .wrapper .rules-popup h2 {
       align-self: flex-start;
       font-size: 35px; }
-    /* line 438, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+    /* line 469, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
     .wrapper .rules-popup .rules-div {
       align-self: flex-end;
       margin-left: -85px;
       margin-right: -20px; }
-    /* line 444, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
+    /* line 475, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
     .wrapper .rules-popup .close-div {
       align-self: flex-start; } }
 

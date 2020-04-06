@@ -23,7 +23,8 @@ $lizard-icon-desktop: 65px;
 $pentagon-width-mobile: 200px;
 $pentagon-width-desktop: 350px;
 
-$game-window-height: 400px;
+$game-window-height-mobile: 400px;
+$game-window-height-desktop: 550px;
 $game-window-padding: 4rem 0;
 $game-window-padding-desktop: 6rem 0;
 $game-icon-width: 50px;
@@ -150,6 +151,11 @@ h3 {
       padding:1rem;
       width:80%;
       min-width: 250px;
+
+      .logo {
+        height: 5rem;
+        width: 5rem;
+      }
       
       .options-list {
         list-style: none;
@@ -169,20 +175,20 @@ h3 {
         border-radius: 10px;
         font-family: $font-stack;
         text-transform: uppercase;
-        width: 4rem;
+        width: 3rem;
         display:flex;
         flex-direction: column;
         padding: 1rem 1.5rem;
         
         p {
           letter-spacing: 1.5px;
-          font-size:15px;
+          font-size:14px;
           font-weight:600;
           color: hsl(229, 64%, 46%);
         }
         
         #score-output{
-          font-size: 60px;
+          font-size: 36px;
           font-weight:700;
           color: $dark-text;
         }
@@ -191,7 +197,7 @@ h3 {
 
     .selection-layout {
       padding: $game-window-padding;
-      height: $game-window-height;
+      height: $game-window-height-mobile;
       display: grid;
       @include selectiongrid($pentagon-width-mobile);
 
@@ -249,7 +255,7 @@ h3 {
 
     .game-layout {
       padding: $game-window-padding;
-      height: $game-window-height;
+      height: $game-window-height-mobile;
       display: none;
       
       .selection-panel {
@@ -275,7 +281,7 @@ h3 {
         }
         
         .house-selection {
-          @include selectionstyle(block);
+          @include selectionstyle(flex);
 
           .circlebase {
             @include circlebase(130px);          
@@ -365,18 +371,24 @@ h3 {
 
 }
 
-@media all and (min-width: 600px) {
+@media all and (min-width: 700px) {
   .wrapper {
     .main-background {
       .main-title {
         margin-top:80px;
         border-radius: 15px;
         width: 50%;
-        max-width: 800px;
+        max-width: 600px;
         padding: 1rem 1.5rem;
+
+        .logo {
+          width: 9rem;
+          height: 9rem;
+        }
 
         .scoreboard {
           width: 6rem;
+          justify-content: space-evenly;
 
           p {
             font-size: 20px;
@@ -410,8 +422,27 @@ h3 {
   
       }
 
+      .game-layout {
+        .selection-panel {
+          height: 400px;
+          align-content: center;
+          .user-selection {
+            flex-direction: column-reverse;
+            width: 200px;
+            
+            .circlebase {
+              @include circlebase(200px, 18px);       
+            }
+          }
+
+          .house-selection {
+            flex-direction: column-reverse;
+          }
+        }
+      }
+
       .rules-button {
-        margin-top: 4rem;
+        margin-top: 3rem;
         margin-left:0;
         margin-right:2rem;
         width: 150px;      
