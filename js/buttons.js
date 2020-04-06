@@ -22,6 +22,8 @@ const defeatText = document.querySelector(".defeat");
 const drawText = document.querySelector(".draw");
 const playAgainButton = document.querySelector(".play-again");
 const resultsPanel = document.querySelector(".results-panel");
+const wrapper = document.querySelector(".wrapper");
+let filter = document.createElement("div");
 
 const scoreOutput = document.getElementById("score-output");
 let score = 0;
@@ -52,10 +54,13 @@ spockButton.addEventListener('click', function (event) {
 
 rulesButton.addEventListener('click', function (event) {
   rulesPopup.style.display = "flex";
+  wrapper.prepend(filter);
+  filter.classList.add('transparent');
 })
 
 closeButton.addEventListener('click', function (event) {
   rulesPopup.style.display = "none";
+  wrapper.removeChild(filter);
 })
 
 playAgainButton.addEventListener('click', function (event) {
