@@ -52,7 +52,7 @@ h3 {
       border-radius: 10px;
       display: flex;
       justify-content: space-between;
-      margin-top: 60px;
+      margin-top: 2rem;
       margin-left: auto;
       margin-right: auto;
       padding: 1rem;
@@ -96,8 +96,8 @@ h3 {
           color: #3b4363; }
     /* line 198, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
     .wrapper .main-background .selection-layout {
-      padding: 4rem 0;
-      height: 400px;
+      padding: 2rem 0;
+      height: 350px;
       display: grid;
       grid-template-columns: [line1] auto [line2] 25px [line3] 25px [line4] 25px [line5] 25px [line6] 25px [line7] 50px [line8] 25px [line9] 25px [line10] 25px [line11] 25px [line12] 25px [line13] auto [end];
       grid-template-rows: [row1] 50px [row2] 25px [row3] 25px [row4] 50px [row5] 25px [row6] 25px [row7] 50px [row8] 50px [row9] 100px [row10] auto [end]; }
@@ -159,8 +159,8 @@ h3 {
         box-shadow: inset 0 3px lightgray, 0 3px 0 0 #40b9ce, 0 2px 0 0 #40b9ce, 0 1px 0 0 #40b9ce; }
     /* line 256, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
     .wrapper .main-background .game-layout {
-      padding: 4rem 0;
-      height: 400px;
+      padding: 2rem 0;
+      height: 350px;
       display: none; }
       /* line 261, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
       .wrapper .main-background .game-layout .selection-panel {
@@ -317,7 +317,7 @@ h3 {
     border-radius: 15px;
     width: 50%;
     max-width: 600px;
-    padding: 1rem 1.5rem; }
+    padding: 1rem 1.5rem 0; }
     /* line 384, ../projects/frontendmentor/rock-paper-scissors-master/_scss/index.scss */
     .wrapper .main-background .main-title .logo {
       width: 9rem;

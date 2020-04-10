@@ -23,9 +23,9 @@ $lizard-icon-desktop: 65px;
 $pentagon-width-mobile: 200px;
 $pentagon-width-desktop: 350px;
 
-$game-window-height-mobile: 400px;
+$game-window-height-mobile: 350px;
 $game-window-height-desktop: 550px;
-$game-window-padding: 4rem 0;
+$game-window-padding: 2rem 0;
 $game-window-padding-desktop: 6rem 0;
 $game-icon-width: 50px;
 
@@ -145,7 +145,7 @@ h3 {
       border-radius: 10px;
       display:flex;
       justify-content: space-between;
-      margin-top:60px;
+      margin-top:2rem;
       margin-left:auto;
       margin-right:auto;
       padding:1rem;
@@ -379,7 +379,7 @@ h3 {
         border-radius: 15px;
         width: 50%;
         max-width: 600px;
-        padding: 1rem 1.5rem;
+        padding: 1rem 1.5rem 0;
 
         .logo {
           width: 9rem;
