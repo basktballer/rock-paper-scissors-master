@@ -25,7 +25,7 @@ $pentagon-width-desktop: 350px;
 
 $game-window-height-mobile: 350px;
 $game-window-height-desktop: 550px;
-$game-window-padding: 2rem 0;
+$game-window-padding: 4rem 0;
 $game-window-padding-desktop: 6rem 0;
 $game-icon-width: 50px;
 
@@ -151,6 +151,7 @@ h3 {
       padding:1rem;
       width:80%;
       min-width: 250px;
+      z-index: 30;
 
       .logo {
         height: 5rem;
@@ -179,6 +180,7 @@ h3 {
         display:flex;
         flex-direction: column;
         padding: 1rem 1.5rem;
+        z-index: 30;
         
         p {
           letter-spacing: 1.5px;
@@ -327,14 +329,14 @@ h3 {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin: 50px 0;
+      margin: 1.5rem 0;
 
       .victory, .defeat, .draw {
         display: none;
       }
       
       .play-again {
-        margin-top: 30px;
+        margin-top: 1rem;
         @include buttonstyle(white, 60%, $dark-text, none, white);
       }
     }
