@@ -23,7 +23,7 @@ Future Additions:
 
 If the player wins, they gain 1 point. If the computer wins, the player loses one point.
 
-#### Bonus
+#### Bonus Win Scenarios
 
 - Scissors beats Paper
 - Paper beats Rock
@@ -36,3 +36,5 @@ If the player wins, they gain 1 point. If the computer wins, the player loses on
 - Lizard beats Paper
 - Spock beats Rock
 
+### Developer Notes
+Next to do is to fix the vertical responsiveness. Need to use more vh dimensions. Currently some screen heights will break the layout. 
