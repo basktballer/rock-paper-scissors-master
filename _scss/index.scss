@@ -30,9 +30,10 @@ $pentagon-width-desktop: 350px;
 
 $game-window-height-mobile: 350px;
 $game-window-height-desktop: 550px;
-$game-window-padding: 2rem 0;
+$game-window-padding-mobile: 2rem 0;
 $game-window-padding-desktop: 6rem 0;
-$game-icon-width: 50px;
+$game-icon-width-mobile: 50px;
+$game-icon-width-desktop: 90px;
 
 h1 {
   font-family: $font-stack;
@@ -204,7 +205,7 @@ h3 {
     }
 
     .selection-layout {
-      padding: $game-window-padding;
+      padding: $game-window-padding-mobile;
       height: $game-window-height-mobile;
       display: grid;
       @include selectiongrid($pentagon-width-mobile);
@@ -262,10 +263,11 @@ h3 {
     }
 
     .game-layout {
-      padding: $game-window-padding;
+      padding: $game-window-padding-mobile;
       height: $game-window-height-mobile;
       display: none;
-      
+      position: relative;
+
       .selection-panel {
         width: 100%;
         height: 200px;
@@ -280,11 +282,11 @@ h3 {
           @include selectionstyle();
 
           .circlebase {
-            @include circlebase(130px);          
+            @include circlebase(130px);
           }
           
            .user-icon  {
-            width: $game-icon-width;
+            width: $game-icon-width-mobile;
           }
         }
         
@@ -297,7 +299,7 @@ h3 {
           
            .house-icon  {
             display: none;
-            width: $game-icon-width;
+            width: $game-icon-width-mobile;
           }
         }
 
@@ -336,13 +338,16 @@ h3 {
       flex-direction: column;
       align-items: center;
       margin: 1.5rem 0;
+      z-index: 30;
 
       .victory, .defeat, .draw {
         display: none;
+        z-index: 30;
       }
       
       .play-again {
         margin-top: 1rem;
+        min-width: 200px;
         @include buttonstyle(white, 60%, $dark-text, none, white);
       }
     }
@@ -379,15 +384,23 @@ h3 {
 
 }
 
-@media all and (min-width: 700px) {
+@media all and (min-width: 700px) {            
+  
+  h3 {
+    margin: 50px 0;
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+
   .wrapper {
     .main-background {
+      justify-content: flex-start;
       .main-title {
-        margin-top:80px;
+        margin-top:60px;
         border-radius: 15px;
         width: 50%;
         max-width: 600px;
-        padding: 1rem 1.5rem 0;
+        padding: 1rem 1.5rem;
 
         .logo {
           width: 9rem;
@@ -431,20 +444,35 @@ h3 {
       }
 
       .game-layout {
+        height: $game-window-height-desktop;
         .selection-panel {
           height: 400px;
           align-content: center;
+          justify-content: space-around;
           .user-selection {
             flex-direction: column-reverse;
-            width: 200px;
+            width: 300px;
             
             .circlebase {
-              @include circlebase(200px, 18px);       
+              @include circlebase(300px, 30px);       
+            }
+
+            .user-icon  {
+              width: $game-icon-width-desktop;
             }
           }
 
           .house-selection {
             flex-direction: column-reverse;
+            width: 300px;
+
+            .circlebase {
+              @include circlebase(300px, 30px);       
+            }
+
+            .house-icon  {
+              width: $game-icon-width-desktop;
+            }
           }
 
           .winner-box-shadow {
@@ -453,8 +481,18 @@ h3 {
         }
       }
 
+      .results-panel {
+        margin-top: -14rem;
+        z-index: 35;
+        .play-again {
+          z-index: 35;
+          margin-top: 2rem;
+          @include buttonstyle(white, 15rem, $dark-text, none, white);
+        }
+      }
+
       .rules-button {
-        margin-top: 3rem;
+        margin-top: 6rem;
         margin-left:0;
         margin-right:2rem;
         width: 150px;      
@@ -477,7 +515,6 @@ h3 {
         align-self: flex-start;
         font-size: 35px;
       }
-
       .rules-div {
         align-self: flex-end;
         margin-left: -85px;
@@ -491,4 +528,14 @@ h3 {
   }
 }
   
-  
+@media all and (max-width: 1200px) {            
+  .wrapper {
+    .main-background {
+      .results-panel{        
+        margin-top: 4rem;
+        min-width: 250px;
+      }
+    }
+  }
+
+}
