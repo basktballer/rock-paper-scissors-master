@@ -73,14 +73,14 @@ async function playGame(selection) {
   gameLayout.style.display = "block";
   userChoice = selection;
 
-  console.log(`user selected ${selection}, waiting 1 seconds for computer to pick`)
+  console.log(`user selected ${selection}, waiting 1 seconds for computer to pick`);
   userIcon.src=`./images/icon-${selection}.svg`;
-  userDiv.classList.add(`${selection}-div`)
+  userDiv.classList.add(`${selection}-div`);
   
   await new Promise(r => setTimeout(r, 1000));
   
   houseChoice = choices[Math.floor(Math.random() * 4)];
-  console.log(`house selected ${houseChoice}, waiting 1 seconds and evaluate`)
+  console.log(`house selected ${houseChoice}, waiting 1 seconds and evaluate`);
   houseIcon.src=`./images/icon-${houseChoice}.svg`;
   houseIcon.style.display = "block";
   houseDiv.classList.add(`${houseChoice}-div`)
@@ -94,7 +94,7 @@ async function playGame(selection) {
     victoryText.style.display = "block";
     userDiv.classList.add('winner-box-shadow');
     userDiv.parentElement.classList.add('winner-fade-back');
-    console.log(`${selection} beats ${houseChoice}. User wins!`)
+    console.log(`${selection} beats ${houseChoice}. User wins!`);
     score = scoreOutput.innerHTML;
     score++;
     scoreOutput.innerHTML = score;
@@ -102,10 +102,13 @@ async function playGame(selection) {
     defeatText.style.display = "block";
     houseDiv.classList.add('winner-box-shadow');
     houseDiv.parentElement.classList.add('winner-fade-back');
-    console.log(`${houseChoice} beats ${selection}. House wins!`)
+    console.log(`${houseChoice} beats ${selection}. House wins!`);
+    score = scoreOutput.innerHTML;
+    score--;
+    scoreOutput.innerHTML = score;
   } else {
     drawText.style.display = "block";
-    console.log(`Draw!`)
+    console.log(`Draw!`);
   }
 
   playAgainButton.style.display = "block";
@@ -119,41 +122,41 @@ function evaluateChoices(user, house) {
   }
   if(user === 'rock') {
     if (house === 'lizard' || house === 'scissors') {
-      return 'user'
+      return 'user';
     } else {
-      return 'house'
+      return 'house';
     }         
   } else if (user === 'paper') {
     if (house === 'rock' || house === 'spock') {
-      return 'user'
+      return 'user';
     } else {
-      return 'house'
+      return 'house';
     }
   } else if (user === 'scissors') {
     if (house === 'lizard' || house === 'paper') {
-      return 'user'
+      return 'user';
     } else {
-      return 'house'
+      return 'house';
     }
   } else if (user === 'lizard') {
     if (house === 'spock' || house === 'paper') {
-      return 'user'
+      return 'user';
     } else {
-      return 'house'
+      return 'house';
     }
   } else if (user === 'spock') {
     if (house === 'rock' || house === 'scissors') {
-      return 'user'
+      return 'user';
     } else {
-      return 'house'
+      return 'house';
     }
   }
 }
 
 function resetElements() {
   playAgainButton.style.display = "none";
-  victoryText.style.display = "none"
-  drawText.style.display = "none"
+  victoryText.style.display = "none";
+  drawText.style.display = "none";
   defeatText.style.display = "none"
   gameLayout.style.display = "none";
   selectionLayout.style.display = "grid";
