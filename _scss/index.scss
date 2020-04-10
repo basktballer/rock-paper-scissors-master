@@ -11,10 +11,15 @@ $paper-linear-gradient: linear-gradient(to top,  hsl(230, 89%, 62%), 1%, hsl(230
 $rock-linear-gradient: linear-gradient(to top,  hsl(349, 71%, 52%), 1%, hsl(349, 70%, 56%) );
 $lizard-linear-gradient: linear-gradient(to top,  hsl(261, 73%, 60%), 1%, hsl(261, 72%, 63%));
 $spock-linear-gradient: linear-gradient(to top,  hsl(189, 59%, 53%), 1%, hsl(189, 58%, 57%));
-$winner-box-shadow: 0 0 20px 20px hsl(214, 47%, 43%),
-                    0 0 40px 40px hsl(214, 47%, 37%),
-                    0 0 60px 60px hsl(214, 47%, 30%),
-                    0 0 80px 80px hsl(214, 47%, 23%);
+$winner-box-shadow-mobile:  0 0 10px 10px hsl(214, 47%, 43%),
+                            0 0 20px 20px hsl(214, 47%, 37%),
+                            0 0 30px 30px hsl(214, 47%, 30%),
+                            0 0 40px 40px hsl(214, 47%, 23%);
+$winner-box-shadow-desktop: 0 0 20px 20px hsl(214, 47%, 43%),
+                            0 0 40px 40px hsl(214, 47%, 37%),
+                            0 0 60px 60px hsl(214, 47%, 30%),
+                            0 0 80px 80px hsl(214, 47%, 23%);
+
 
 $icon-width-mobile: 30px;
 $icon-width-desktop: 45px;
@@ -25,7 +30,7 @@ $pentagon-width-desktop: 350px;
 
 $game-window-height-mobile: 350px;
 $game-window-height-desktop: 550px;
-$game-window-padding: 4rem 0;
+$game-window-padding: 2rem 0;
 $game-window-padding-desktop: 6rem 0;
 $game-icon-width: 50px;
 
@@ -316,7 +321,7 @@ h3 {
         }
 
         .winner-box-shadow {
-          box-shadow: $winner-box-shadow;
+          box-shadow: $winner-box-shadow-mobile;
         }
 
         .winner-fade-back {
@@ -439,6 +444,10 @@ h3 {
 
           .house-selection {
             flex-direction: column-reverse;
+          }
+
+          .winner-box-shadow {
+            box-shadow: $winner-box-shadow-desktop;
           }
         }
       }
