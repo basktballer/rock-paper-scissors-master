@@ -143,6 +143,7 @@ h3 {
     top: 0;
     display:flex;
     flex-direction: column;
+    justify-content: space-around;
     height: 100vh;
     
     .main-title {
@@ -360,7 +361,7 @@ h3 {
     background: white;
     width: 100%;
     height: 100%;
-    z-index: 20;
+    z-index: 40;
     border-radius: 10px;
     flex-direction: column;
     align-items: center;
