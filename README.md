@@ -4,6 +4,10 @@
 
 [Frontend Mentor](https://www.frontendmentor.io) challenges allow you to improve your skills in a real-life workflow.
 
+## See my work
+
+[View the project here](https://rock-paper-scissors-master.now.sh/)
+
 ## The challenge
 
 Your challenge is to build out this Rock, Paper, Scissors game and get it looking as close to the design as possible.
